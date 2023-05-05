@@ -1,25 +1,24 @@
 "use strict";
 
-// const result = confirm(`youuuu`);
-// console.log(result);
+const numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?', '');
 
-// const answer = +prompt(`что делаешь?`, ``); // теперь тип данных будет number
-
-// console.log(answer + 5); // выводит в консоль тип данных, которые ввел
-
-
-// const answers = [];
-
-// answers[0] = prompt('имя', '');
+const personalMovieDB = {
+	count: numberOfFilms,
+	movies: {},
+	actors: {},
+	genres: [],
+	privat: false
+};
 
 
+let a1 = prompt('Один из последних просмотренных фильмов?', '');
+let a2 = +prompt('Насколько оцените его?', '');
 
-// console.log(typeof (answers));
+let a3 = prompt('Один из последних просмотренных фильмов?', '');
+let a4 = +prompt('Насколько оцените его?', '');
 
 
+personalMovieDB.movies[a1] = a2;
+personalMovieDB.movies[a3] = a4;
 
-let incr = 10;
-let decr = 10;
-
-console.log(++incr); /* выведет 11, потому что префикс (сначала инккрементирование, потом выводит в консоль */
-console.log(decr--); /* выведет 10, потому что -1 будет постфикс (сначала выведет в консоль, потом декрементирование */
+console.log(personalMovieDB);
